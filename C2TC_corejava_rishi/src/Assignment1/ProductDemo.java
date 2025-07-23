@@ -9,11 +9,11 @@ public class ProductDemo {
 
         for (int i = 0; i < 4; i++) {
             System.out.println("Enter details for Product " + (i + 1) + ":");
-            System.out.println("Name: ");
+            System.out.print("Name: ");
             String name = sc.nextLine();
-            System.out.println("ID: ");
+            System.out.print("ID: ");
             int id = Integer.parseInt(sc.nextLine());
-            System.out.println("Price: ");
+            System.out.print("Price: ");
             double price = Double.parseDouble(sc.nextLine());
             products[i] = new Product(name, id, price);
         }
