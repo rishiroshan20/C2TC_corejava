@@ -1,37 +1,56 @@
 package Day3;
 
 public class Customer {
+	private String customerName;
+	 private int customerId;
+	 private String customerCity;
+	 
+	// Default Constructor
+	public Customer() {
+		System.out.println("Default Constructor");
+	}
 	
-	private int cid;
-	private String name;
-	private String city;
+	//Parameterized Constructor
+	//use of this keyword
+	public Customer(String customerName, int customerId, String customerCity) {
+		
+		this(); //calling default constructor
+		
+		System.out.println("Parameterized Constructor");
+		this.customerName = customerName;
+		this.customerId = customerId;
+		this.customerCity = customerCity;
+	}
 	
-	public int getCid() {
-		return cid;
+	//Getter and Setters
+	public String getCustomerName() {
+		return customerName;
 	}
 
-	public void setCid(int cid) {
-		this.cid = cid;
+	public void setCustomerName(String customerName) {
+		this.customerName = customerName;
 	}
 
-	public String getName() {
-		return name;
+	public int getCustomerId() {
+		return customerId;
 	}
 
-	public void setName(String name) {
-		this.name = name;
+	public void setCustomerId(int customerId) {
+		this.customerId = customerId;
 	}
 
-	public String getCity() {
-		return city;
+	public String getCustomerCity() {
+		return customerCity;
 	}
 
-	public void setCity(String city) {
-		this.city = city;
+	public void setCustomerCity(String customerCity) {
+		this.customerCity = customerCity;
 	}
 
-	public void display() {
-        System.out.println("Cid = " + cid + ", Name = " + name + ", City = " + city);
-    
+	@Override
+	public String toString() {
+		return "Customer [customerName=" + customerName + ", customerId=" + customerId + ", customerCity="
+				+ customerCity + "]";
 	}
+
 }
