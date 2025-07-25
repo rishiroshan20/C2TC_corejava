@@ -2,7 +2,9 @@ package Day1;
 
 public class CharDemo {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws ClassNotFoundException {
+		
+		Class.forName("com.mysql.jdbc.Driver");
 		        // assigning single character literal
 				char ch = 'a';
 				System.out.println(ch);
